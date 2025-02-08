@@ -286,7 +286,6 @@ func killProcess(pid string) error {
 }
 
 func showConfirmationDialog(app *tview.Application, table *tview.Table, process ListeningProcess, onConfirm func()) {
-
 	modal := tview.NewModal().
 		SetText(fmt.Sprintf("Are you sure you want to kill process %s (%s)?", process.PID, process.Command)).
 		AddButtons([]string{"Yes", "No"}).
